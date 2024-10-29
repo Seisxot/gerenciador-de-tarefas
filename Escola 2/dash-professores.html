@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Professor</title>
+    <link rel="stylesheet" href="dashboard-professor.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Adicionando Chart.js -->
+</head>
+<body>
+    <header>
+        <h1>Dashboard do Professor</h1>
+    </header>
+
+    <nav>
+        <button class="nav-button" onclick="showSection('atividades')">Atividades</button>
+        <button class="nav-button" onclick="showSection('notas')">Notas</button>
+        <button class="nav-button" onclick="showSection('presenca')">Presença</button>
+        <button class="nav-button" onclick="showSection('horarios')">Horários</button>
+        <button class="nav-button" onclick="showCharts()">Gráficos</button> <!-- Botão para Gráficos -->
+    </nav>
+
+    <div id="atividades" class="section" style="display: none;">
+        <h2>Gerenciar Atividades</h2>
+        <form id="activity-form">
+            <input type="text" placeholder="Descrição da Atividade" required class="input-field">
+            <input type="date" required class="input-field">
+            <button type="submit" class="submit-button">Adicionar Atividade</button>
+        </form>
+        <div id="activity-list"></div>
+    </div>
+
+    <div id="notas" class="section" style="display: none;">
+        <h2>Gerenciar Notas</h2>
+        <form id="grades-form">
+            <input type="text" placeholder="Matéria" required class="input-field">
+            <input type="number" placeholder="Nota" required class="input-field">
+            <button type="submit" class="submit-button">Adicionar Nota</button>
+        </form>
+        <div id="grades-list"></div>
+    </div>
+
+    <div id="presenca" class="section" style="display: none;">
+        <h2>Gerenciar Presença</h2>
+        <form id="attendance-form">
+            <input type="text" placeholder="Aluno" required class="input-field">
+            <select required class="input-field">
+                <option value="Presente">Presente</option>
+                <option value="Falta">Falta</option>
+            </select>
+            <button type="submit" class="submit-button">Registrar Presença</button>
+        </form>
+        <div id="attendance-list"></div>
+    </div>
+
+    <div id="horarios" class="section" style="display: none;">
+        <h2>Gerenciar Horários</h2>
+        <form id="schedule-form">
+            <input type="text" placeholder="Dia da Semana" required class="input-field">
+            <input type="time" required class="input-field">
+            <button type="submit" class="submit-button">Adicionar Horário</button>
+        </form>
+        <div id="schedule-list"></div>
+    </div>
+
+    <div id="graficos" class="section" style="display: none;">
+        <h2>Gráficos de Desempenho</h2>
+        <canvas id="performanceChart" style="width:100%; max-width:600px;"></canvas>
+    </div>
+
+    <script src="dash-profesores.js"></script>
+</body>
+</html>

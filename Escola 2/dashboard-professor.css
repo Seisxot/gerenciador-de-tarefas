@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #9d00ff);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    border-bottom: 2px solid rgba(255, 221, 89, 0.4);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Navegação com botões centralizados */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    width: 90%;
+}
+
+/* Botões estilizados */
+.nav-button {
+    background-color: #6d28d9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(109, 40, 217, 0.4);
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background: #9333ea;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(147, 51, 234, 0.5);
+}
+
+/* Estilo dos campos de entrada */
+.input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Botão de envio estilizado */
+.submit-button {
+    background-color: #34d399;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(52, 211, 153, 0.4);
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: #10b981;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(52, 211, 153, 0.5);
+}
+
+/* Painéis de conteúdo */
+.section {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Seção de Gráficos */
+#graficos {
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    width: 100%;
+    border-top: 2px solid rgba(255, 221, 89, 0.4);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    .nav-button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .input-field {
+        padding: 8px;
+    }
+}

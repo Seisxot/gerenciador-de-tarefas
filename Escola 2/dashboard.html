@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Aluno</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard do Aluno</h1>
+    </header>
+
+    <nav>
+        <button class="nav-button" onclick="showSection('atividades')">Atividades</button>
+        <button class="nav-button" onclick="showSection('notas')">Notas</button>
+        <button class="nav-button" onclick="showSection('presenca')">Presença</button>
+        <button class="nav-button" onclick="showSection('horarios')">Horários</button>
+    </nav>
+
+    <!-- Painel para visualização de atividades -->
+    <div id="atividades" class="section">
+        <h2>Atividades</h2>
+        <div id="activity-list"></div>
+    </div>
+
+    <!-- Painel para visualização de notas -->
+    <div id="notas" class="section" style="display: none;">
+        <h2>Notas</h2>
+        <div id="grades-list"></div>
+    </div>
+
+    <!-- Painel para visualização de presença -->
+    <div id="presenca" class="section" style="display: none;">
+        <h2>Presença</h2>
+        <div id="attendance-list"></div>
+    </div>
+
+    <!-- Painel para visualização de horários -->
+    <div id="horarios" class="section" style="display: none;">
+        <h2>Horários</h2>
+        <div id="schedule-list"></div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
